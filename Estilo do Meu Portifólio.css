@@ -1,0 +1,342 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+
+#presentation {
+    background-image: url(./imagens/Header-Background.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#presentation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#presentation h1 {
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+
+}
+
+#presentation h1:nth-child(1) {
+    animation-delay: .8s;
+}
+
+#presentation h1:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+#presentation h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2.8s;
+    font-size: 6rem;
+}
+
+#presentation h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 0.8s ease;
+    animation-delay: .5s;
+    background-image: linear-gradient(70deg, #050924 0%, #000000 100%);
+}
+
+#presentation h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#presentation h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#presentation .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: 30px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+    font-weight: 700;
+}
+
+#presentation .cta:hover {
+    color: gold;
+    font-weight: 700;
+    background-color: rgba(5, 9, 26, 0.678);
+    font-size: 2.05rem;
+    border-top: #05091A;
+    border-left: #05091A;
+    border-bottom-color: gold;
+    border-right-color: gold;
+    margin-top: 30px;
+}
+
+#presentation .cta:active {
+    color: gold;
+    font-weight: 700;
+    background-color: rgba(5, 9, 26, 0.678);
+    font-size: 2rem;
+    border: 2px solid gold;
+    margin-top: 30px;
+}
+
+/* Main */
+
+#portfolio {
+    background-image: linear-gradient(180deg, #000000 0%, #050919 100%);
+}
+
+#portfolio .portfolio-header h1 {
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+h1.section-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 4.5rem;
+    text-decoration: underline;
+    text-shadow: 0 0 .6rem #17df05c9;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#portfolio .portfolio {
+    flex-direction: column;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 20px 0%;
+    padding-top: 30px;
+}
+
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#portfolio .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 .5rem #17df05c9;
+}
+
+#portfolio .project-item:hover .project-img img {
+    transform: scale(1.1);
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(320deg, #222222 0%, #000000 100%);
+    color: white;
+}
+
+#portfolio .project-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#portfolio .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img img {
+    transition: 0.5s ease transform;
+}
+
+#portfolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #222222 0%, #000000 100%);
+    opacity: 0.7;
+}
+
+/* Footer */
+
+footer{
+    background-image: linear-gradient(180deg, #05091A 0%, #000000 100%);
+    color: #ffffff;
+    text-align: left;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+footer p span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+footer #adress .contact{
+    text-decoration: initial;
+    color: rgba(21, 255, 0, 0.712);
+}
+
+/* Keyframes */
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+        text-shadow: 0 0 .5rem #0003bec9;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: gold;
+        font-weight: 500px;
+        text-shadow: 0 0 .5rem #0003bec9;
+    }
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+/* Media Query */
+
+@media only screen and (min-width: 1340px) {
+    #portfolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 20px;
+        width: 100%;
+        border-radius: 10px;
+        min-width: 1240px;
+    }
+
+    #portfolio .all-projects .project-info {
+        height: 100%;
+    }
+
+    #portfolio .all-projects .project-img {
+        height: 100%;
+    }
+
+    #portfolio .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #portfolio .odd {
+        transform: scaleX(-1)
+    }
+
+    #portfolio .project-item:hover .project-img img.odd {
+        transform: scale(-1.1, 1.1);
+    }
+}

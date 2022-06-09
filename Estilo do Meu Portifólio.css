@@ -205,7 +205,7 @@ h1.section-title {
 }
 
 #portfolio .project-item:hover{
-    cursor:
+    cursor: pointer;
 }
 
 #portfolio .project-item:hover .project-img img {

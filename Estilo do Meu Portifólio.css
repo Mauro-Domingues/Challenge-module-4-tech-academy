@@ -204,6 +204,10 @@ h1.section-title {
     box-shadow: 0 0 .5rem #17df05c9;
 }
 
+#portfolio .project-item:hover{
+    cursor: pointer;
+}
+
 #portfolio .project-item:hover .project-img img {
     transform: scale(1.1);
 }
